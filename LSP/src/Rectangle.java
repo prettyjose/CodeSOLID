@@ -1,34 +1,22 @@
 /**
  * Created by rajashrk on 8/2/17.
  */
-public class Rectangle {
+public class Rectangle/* extends PerpendicularQuadrilateral-NOT REQUIRED as context doesn't ask for it and as it's error prone*/{
 
     private Double length;
     private Double width;
 
-    public Rectangle() {
-        this.length = 0.0;
-        this.width = 0.0;
-    }
+
 
     public Rectangle(Double length, Double width) {
         this.length = length;
         this.width = width;
     }
 
-    public void setLength(Double length) {
-        this.length = length;
+    public void printDimensions(){
+        System.out.println("Rectangle width = " + this.width +  ", length = " + this.length);
     }
 
-    public void setWidth(Double width) {
-        this.width = width;
-    }
 
-    public Double getLength() {
-        return length;
-    }
 
-    public Double getWidth() {
-        return width;
-    }
 }

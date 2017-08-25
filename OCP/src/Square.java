@@ -1,7 +1,7 @@
 /**
  * Created by rajashrk on 8/2/17.
  */
-public class Square {
+public class Square implements Shape{
 
     private double length;
 

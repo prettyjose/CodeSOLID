@@ -1,15 +1,18 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by rajashrk on 8/24/17.
  */
 public class WeatherTracker {
 
+    //Todo: Move all weather related logic(like weather condition) to Weather class
     String weatherCondition;
-    EmailNotifier emailNotifier;
-    SMSNotifier smsNotifier;
+    Broadcaster broadcaster;
 
     public WeatherTracker() {
-        emailNotifier = new EmailNotifier();
-        smsNotifier = new SMSNotifier();
+        broadcaster = new Broadcaster();
     }
 
     public void setWeatherCondition(String weatherCondition) {
@@ -21,7 +24,7 @@ public class WeatherTracker {
     }
 
     public void broadcastWeather() {
-        emailNotifier.broadcastWeather(this);
-        smsNotifier.broadcastWeather(this);
+
+        broadcaster.broadcast(this);
     }
 }

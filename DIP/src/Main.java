@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         WeatherTracker tracker = new WeatherTracker();
-        tracker.setWeatherCondition(" its heavily raining");
+        tracker.setWeatherCondition(" it's heavily raining");
         tracker.broadcastWeather();
     }
 }

@@ -1,7 +1,7 @@
 /**
  * Created by rajashrk on 8/2/17.
  */
-public class Circle {
+public class Circle implements Shape{
     private double radius;
 
     public Circle(double radius) {

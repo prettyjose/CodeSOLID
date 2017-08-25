@@ -1,9 +1,9 @@
 /**
  * Created by rajashrk on 8/24/17.
  */
-public class HummingBird implements Bird {
-    private String  currentLocation;
+public class HummingBird implements Flyable {
 
+    private String  currentLocation;
     public HummingBird() {
     }
 
@@ -13,8 +13,5 @@ public class HummingBird implements Bird {
         System.out.println("currently" + currentLocation);
     }
 
-    @Override
-    public void swim() {
-        throw new  UnsupportedOperationException();
-    }
+
 }

@@ -1,17 +1,12 @@
 /**
  * Created by rajashrk on 8/24/17.
  */
-public class Penguin  implements  Bird {
+public class Penguin implements Swimmable{
 
     private String  currentLocation;
 
     public Penguin() {
 
-    }
-
-    @Override
-    public void fly() {
-        throw new  UnsupportedOperationException();
     }
 
     @Override

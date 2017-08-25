@@ -6,13 +6,13 @@ public class Person {
     private int age;
     private String gender;
 
-    private String emailAddress;
+    private Email emailAddress;
 
     public Person(String name, int age, String gender, String emailAddress) {
         this.name = name;
         this.age = age;
         this.gender = gender;
-        this.emailAddress = emailAddress;
+        this.emailAddress = new Email(emailAddress);
     }
 
     public String getName() {
@@ -27,7 +27,7 @@ public class Person {
         return gender;
     }
 
-    public String getEmailAddress() {
+    public Email getEmailAddress() {
         return emailAddress;
     }
 
@@ -43,14 +43,9 @@ public class Person {
         this.gender = gender;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void changeEmailAddress(String emailAddress) {
+        this.emailAddress.setEmailId(emailAddress);
     }
 
-    public boolean isValidEmailId() {
-        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
-        java.util.regex.Matcher m = p.matcher(this.emailAddress);
-        return m.matches();
-    }
+
 }
